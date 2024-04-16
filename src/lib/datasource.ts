@@ -7,7 +7,7 @@ dotenv.config();
 
 const db = new DataSource({
   type: "sqlite",
-  database: "country.sqlite",
+  database: "../../country.sqlite",
   entities: [Country],
   synchronize: true,
 });

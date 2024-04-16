@@ -1,9 +1,9 @@
 import { Field, ID, ObjectType } from "type-graphql";
-import { Column, Entity, PrimaryColumn } from "typeorm";
+import { BaseEntity, Column, Entity, PrimaryColumn } from "typeorm";
 
 @ObjectType()
 @Entity()
-export default class Country {
+export default class Country extends BaseEntity {
   @Field(() => ID)
   @PrimaryColumn()
   code!: string;
